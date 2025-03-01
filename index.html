@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pashkevich</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(180deg, #000000, #000000, #000000, #ad80f4, #c882d5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden; /* Обрезает выходящие части */
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2; /* Поверх изображений */
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin: 10px 0;
+            background: #ad80f4;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e64a19;
+        }
+        .corner-img {
+            position: absolute;
+            width: 600px;
+            z-index: 1; /* Под контейнером */
+        }
+        .top-right {
+            top: -350px;
+            right: -200px;
+            transform: rotate(30deg); /* Наклон правого верхнего */
+        }
+        .bottom-left {
+            bottom: -200px;
+            left: -200px;
+            transform: rotate(25deg); /* Наклон левого нижнего */
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 600px) {
+            /* Уменьшаем размер изображений в углу */
+            .corner-img {
+                width: 300px;
+                top: -150px; /* Подстраиваем для маленьких экранов */
+                right: -100px;
+                bottom: -100px;
+                left: -100px;
+            }
+
+            /* Уменьшаем размер кнопок и текста */
+            .btn {
+                font-size: 16px;
+            }
+
+            /* Меняем отступы внутри контейнера */
+            .container {
+                padding: 15px;
+                width: 85%;
+                max-width: 100%;
+            }
+
+            /* Центрируем текст и делаем более компактным */
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="image.png" class="corner-img top-right" alt="Image 1">
+    <img src="image.png" class="corner-img bottom-left" alt="Image 2">
+    
+    <div class="container">
+        <h2>Мои ссылки</h2>
+        <a href="https://t.me/+SnASJ0cBMgdjMGMy" class="btn" target="_blank">Telegram</a>
+        <a href="https://www.youtube.com/@Pashkevich02" class="btn" target="_blank">YouTube</a>
+        <a href="https://www.tiktok.com/@pashkevich_18" class="btn" target="_blank">TikTok</a>
+        <a href="https://www.twitch.tv/pashkevich2012" class="btn" target="_blank">Twitch</a>
+        <a href="https://donatello.to/Pashkevich2012" class="btn" target="_blank">Донаты</a>
+    </div>
+</body>
+</html>
